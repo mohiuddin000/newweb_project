@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .box {
+      position: relative;
+      height: 80vh;
+      width: 100%;
+      background-color: black;
+    }
+    .ball {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: red;
+      height: 70px;
+      width: 70px;
+      border-radius: 50px;
+
+      animation: animationX 3s linear infinite,
+        animationY 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes animationX {
+      from {
+        left: 0;
+      }
+      to {
+        left: 100%;
+      }
+    }
+    @keyframes animationY {
+      from {
+        bottom: 0;
+      }
+      to {
+        bottom: 100%;
+      }
+    }
+  </style>
+  <body>
+    <div class="box">
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>
